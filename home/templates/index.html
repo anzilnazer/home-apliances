@@ -1,0 +1,26 @@
+{%extends 'theme.html'%}
+ {%block content%}
+<h2><center>Welcome to Home things</center></h2>
+
+
+<div class="container">
+    <div class="row">
+        {%for product in products%}
+           <div class="col-md-3">
+               <div class="card" style="width: 18rem;">
+  <img src="{{product.image}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{product.name}}</h5>
+    <p class="card-text">PRICE:${{product.price}}</p>
+      <p class="card-text">STOCK:{{product.price}}</p>
+    <a href="" class="btn btn-primary">Buy Now</a>
+  </div>
+</div>
+           </div>
+        {%endfor%}
+
+    </div>
+
+</div>
+
+{%endblock%}
